@@ -29,7 +29,5 @@
     android:maxLines="1"
     android:scrollHorizontally="true"
     android:singleLine="true"
-    android:textColor="?android:attr/textColorTertiary"
-    android:textColorHighlight="?android:attr/colorControlHighlight"
-    android:textColorHint="?android:attr/textColorHint"
+    android:textColor="#ff212121"
     android:textSize="16sp" />
