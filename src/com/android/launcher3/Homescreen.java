@@ -141,6 +141,17 @@ public class Homescreen extends SettingsActivity implements PreferenceFragment.O
                     return true;
                 }
             });
+
+            ListPreference searchProvider = (ListPreference) findPreference(Utilities.SEARCH_PROVIDER_KEY);
+            searchProvider.setSummary(searchProvider.getEntry());
+            searchProvider.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    int index = searchProvider.findIndexOfValue((String) newValue);
+                    searchProvider.setSummary(searchProvider.getEntries()[index]);
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    return true;
+                }
+            });
         }
 
         @Override
