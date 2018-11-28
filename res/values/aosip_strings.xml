@@ -120,4 +120,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- QuickSpace -->
     <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
+
+    <!-- Search engine -->
+    <string name="search_provider_title">Searchbar search engine</string>
+    <string name="search_provider_google" translatable="false">Google</string>
+    <string name="search_provider_bing" translatable="false">Bing</string>
+    <string name="search_provider_duckduckgo" translatable="false">DuckDuckGo</string>
 </resources>
