@@ -117,4 +117,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="lock_desktop_title">Lock desktop</string>
     <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
     <string name="lock_desktop_toast">Desktop is locked. Unlock it to proceed.</string>
+
+    <!-- QuickSpace -->
+    <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
 </resources>
