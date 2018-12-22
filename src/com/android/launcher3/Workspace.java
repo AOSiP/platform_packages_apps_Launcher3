@@ -36,6 +36,7 @@ import android.app.WallpaperManager;
 import android.appwidget.AppWidgetHostView;
 import android.appwidget.AppWidgetProviderInfo;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -324,8 +325,7 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
 
     private void triggerGesture(MotionEvent event) {
         switch(mGestureMode) {
-            // Stock behavior
-            case 0:
+            case 0: // Stock
                 break;
             // Sleep
             case 1:
@@ -334,6 +334,9 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
             // Flashlight
             case 2:
                 aosipUtils.toggleCameraFlash();
+                break;
+            case 3: // Google search
+                launchGoogleSearch(getContext());
                 break;
         }
     }
@@ -3535,6 +3538,20 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
         @Override
         public void onAnimationEnd(Animator animation) {
             onEndStateTransition();
+        }
+    }
+
+    public void launchGoogleSearch(Context context) {
+        Intent launchIntent = new Intent(Intent.ACTION_VIEW);
+        launchIntent.setPackage("com.google.android.googlequicksearchbox");
+        launchIntent.setClassName("com.google.android.googlequicksearchbox",
+                "com.google.android.googlequicksearchbox.SearchActivity");
+        if (Utils.isPackageInstalled(context,
+                "com.google.android.googlequicksearchbox")) {
+            context.startActivity(launchIntent);
+        } else {
+            Toast.makeText(context, R.string.pref_homescreen_dt_gestures_google_toast,
+                    Toast.LENGTH_SHORT).show();
         }
     }
 }
