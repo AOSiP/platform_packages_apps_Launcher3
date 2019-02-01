@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "638ed2a5_2a789af7",
+        "filename": "src/com/android/launcher3/Workspace.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 323,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2019-02-01T18:06:01Z",
+      "side": 1,
+      "message": "The gesture is sometimes hard to trigger, play around with the delta here and see if you find a more comfortable number.",
+      "revId": "21a4ff55c7a2edb25fc35b23d43e403c1bdf0eb0",
+      "serverId": "44769751-fbfc-497d-9c9a-4bb318a4117c",
+      "unresolved": true
+    }
+  ]
+}
