@@ -36,6 +36,7 @@ import android.util.AttributeSet;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.launcher3.Launcher;
@@ -107,9 +108,16 @@ public class HotseatQsbView extends BaseQsbView {
     }
 
     public void setSuperGAlpha() {
-        View gIcon = findViewById(R.id.g_icon);
+        ImageView gIcon = findViewById(R.id.g_icon);
         if (gIcon != null) {
             gIcon.setAlpha(1.0f);
+            if (Utilities.getSearchProvider(getContext()).contains("google")) {
+                gIcon.setImageResource(R.drawable.ic_super_g_color);
+            } else if (Utilities.getSearchProvider(getContext()).contains("bing")) {
+                gIcon.setImageResource(R.drawable.ic_super_bing_color);
+            } else if (Utilities.getSearchProvider(getContext()).contains("duckduckgo")) {
+                gIcon.setImageResource(R.drawable.ic_super_ddg_color);
+            }
         }
     }
 
