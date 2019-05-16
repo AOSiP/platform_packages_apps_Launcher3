@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8c2bd8ac_97dad436",
+        "filename": "src/com/android/launcher3/Homescreen.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2019-05-16T17:54:10Z",
+      "side": 1,
+      "message": "nit: whitespace",
+      "revId": "a38c5f63bad9a23c7dae4594db6ce34d7320789d",
+      "serverId": "44769751-fbfc-497d-9c9a-4bb318a4117c",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e681e51c_71a7feeb",
+        "filename": "src/com/android/launcher3/Homescreen.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2019-05-16T17:54:10Z",
+      "side": 1,
+      "message": "should let users choose regardless of this IMO",
+      "revId": "a38c5f63bad9a23c7dae4594db6ce34d7320789d",
+      "serverId": "44769751-fbfc-497d-9c9a-4bb318a4117c",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "21e73336_147d6d00",
+        "filename": "src/com/android/launcher3/Homescreen.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1000086
+      },
+      "writtenOn": "2019-05-16T17:54:10Z",
+      "side": 1,
+      "message": "pretty sure this can be a lambda",
+      "revId": "a38c5f63bad9a23c7dae4594db6ce34d7320789d",
+      "serverId": "44769751-fbfc-497d-9c9a-4bb318a4117c",
+      "unresolved": true
+    }
+  ]
+}
