@@ -54,8 +54,7 @@ public class DateTextView extends DoubleShadowTextView {
         String format;
         if (Utilities.ATLEAST_NOUGAT) {
             if (mDateFormat == null || forcedChange) {
-                (mDateFormat = DateFormat.getInstanceForSkeleton(getContext()
-                        .getString(R.string.abbrev_wday_month_day_no_year), Locale.getDefault()))
+                (mDateFormat = DateFormat.getInstanceForSkeleton("EEEEMMMd", Locale.getDefault()))
                         .setContext(DisplayContext.CAPITALIZATION_FOR_STANDALONE);
             }
             format = mDateFormat.format(System.currentTimeMillis());
