@@ -26,7 +26,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="google_feed_summary">To the left of the main home screen</string>
 
     <!-- Folder titles -->
-    <string name="google_title" translatable="false">Google</string>
-    <string name="play_folder_title">Play</string>
+    <string name="google_folder_title" translatable="false">Google</string>
 
 </resources>
