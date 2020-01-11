@@ -53,6 +53,11 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.launcher3.customization.IconDatabase;
+import com.android.launcher3.settings.preference.IconPackPrefSetter;
+import com.android.launcher3.settings.preference.ReloadingListPreference;
+import com.android.launcher3.util.AppReloader;
+
 /**
  * Settings activity for Launcher. Currently implements the following setting: Allow rotation
  */
@@ -62,6 +67,7 @@ public class SettingsActivity extends Activity
     private static final String DEVELOPER_OPTIONS_KEY = "pref_developer_options";
     private static final String FLAGS_PREFERENCE_KEY = "flag_toggler";
 
+    private static final String KEY_ICON_PACK = "pref_icon_pack";
     private static final String NOTIFICATION_DOTS_PREFERENCE_KEY = "pref_icon_badging";
     /** Hidden field Settings.Secure.ENABLED_NOTIFICATION_LISTENERS */
     private static final String NOTIFICATION_ENABLED_LISTENERS = "enabled_notification_listeners";
@@ -72,10 +78,16 @@ public class SettingsActivity extends Activity
     public static final String SAVE_HIGHLIGHTED_KEY = "android:preference_highlighted";
     public static final String KEY_FEED_INTEGRATION = "pref_feed_integration";
 
+    private static Context mContext;
+
+    public interface OnResumePreferenceCallback {
+        void onResume();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        mContext = getApplicationContext();
         if (savedInstanceState == null) {
             Bundle args = new Bundle();
             String prefKey = getIntent().getStringExtra(EXTRA_FRAGMENT_ARG_KEY);
@@ -209,6 +221,17 @@ public class SettingsActivity extends Activity
 
                 case ADD_ICON_PREFERENCE_KEY:
                     return Utilities.ATLEAST_OREO;
+
+                case KEY_ICON_PACK:
+                    ReloadingListPreference icons = (ReloadingListPreference) findPreference(KEY_ICON_PACK);
+                    icons.setOnReloadListener(new IconPackPrefSetter(mContext));
+                    icons.setOnPreferenceChangeListener((pref, val) -> {
+                        IconDatabase.clearAll(mContext);
+                        IconDatabase.setGlobal(mContext, (String) val);
+                        AppReloader.get(mContext).reload();
+                        return true;
+                    });
+                    return true;
 
                 case ALLOW_ROTATION_PREFERENCE_KEY:
                     if (getResources().getBoolean(R.bool.allow_rotation)) {
