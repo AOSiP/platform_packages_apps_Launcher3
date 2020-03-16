@@ -115,7 +115,7 @@ public abstract class BaseFlags {
             "Rotate launcher UI instead of using transposed layout");
 
     public static final TogglableFlag APP_SEARCH_IMPROVEMENTS = new TogglableFlag(
-            "APP_SEARCH_IMPROVEMENTS", false,
+            "APP_SEARCH_IMPROVEMENTS", true,
             "Adds localized title and keyword search and ranking");
 
     public static void initialize(Context context) {
