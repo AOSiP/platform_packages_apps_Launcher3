@@ -133,4 +133,7 @@
 
     <!-- Preference default value -->
     <string name="pref_value_default" translatable="false">Default</string>
+
+    <string-array name="live_wallpapers_remove_sysui_scrims">
+    </string-array>
 </resources>
