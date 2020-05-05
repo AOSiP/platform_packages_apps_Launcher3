@@ -19,6 +19,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_qsb_show_summary"></string>
     <string name="pref_qsb_show_title">Show search widget</string>
     <!-- Google Feed -->
-    <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_title">Google uygulamasını görüntüle</string>
+    <string name="google_feed_summary">Ana ekranın solunda</string>
 </resources>
