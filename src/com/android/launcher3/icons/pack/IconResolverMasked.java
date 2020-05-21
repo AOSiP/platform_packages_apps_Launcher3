@@ -22,6 +22,8 @@ import com.android.launcher3.icons.clock.CustomClock;
 
 import static com.android.launcher3.icons.BaseIconFactory.CONFIG_HINT_NO_WRAP;
 
+import static com.android.launcher3.icons.BaseIconFactory.CONFIG_HINT_NO_WRAP;
+
 public class IconResolverMasked implements IconResolver {
     private final Context mContext;
     private final IconPack.Data mData;
