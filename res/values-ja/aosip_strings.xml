@@ -21,4 +21,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Google Feed -->
     <string name="google_feed_title">Google アプリを表示</string>
     <string name="google_feed_summary">メインホーム画面の左側へ表示する</string>
+    <!-- Folder titles -->
 </resources>

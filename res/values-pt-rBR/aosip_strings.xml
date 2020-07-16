@@ -21,4 +21,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Google Feed -->
     <string name="google_feed_title">Mostrar aplicativo do Google</string>
     <string name="google_feed_summary">À esquerda da tela inicial principal</string>
+    <!-- Folder titles -->
 </resources>
