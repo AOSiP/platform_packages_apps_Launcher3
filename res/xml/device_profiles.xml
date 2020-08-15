@@ -103,7 +103,6 @@
         launcher:numFolderColumns="4"
         launcher:numHotseatIcons="5"
         launcher:defaultLayoutId="@xml/default_workspace_5x5"
-        launcher:numColumnsAllApps="5" >
 
         <display-option
             launcher:name="Large Phone"
@@ -131,7 +130,6 @@
         launcher:numFolderColumns="5"
         launcher:numHotseatIcons="6"
         launcher:defaultLayoutId="@xml/default_workspace_6x6"
-        launcher:numColumnsAllApps="6" >
 
         <display-option
             launcher:name="Large Phone"
