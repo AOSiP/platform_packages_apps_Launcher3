@@ -85,5 +85,7 @@
     <string name="app_info_version" translatable="false">Version</string>
     <string name="app_info_more" translatable="false">More</string>
 
+    <!-- Icon size -->
+    <string name="icon_size_title">Icon size</string>
 
 </resources>
